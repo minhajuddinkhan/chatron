@@ -1,5 +1,1 @@
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-
-md-sidenav {
-  width: 200px;
-}
+@import "app.scss";

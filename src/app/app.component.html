@@ -1,4 +1,19 @@
-<md-sidenav-container>
-    <md-sidenav mode="side" opened="true">Drawer content</md-sidenav>
-    <div class="my-content">Main content</div>
-  </md-sidenav-container>
+
+<md-sidenav-container class="demo-sidenav-container" fullscreen>
+  <md-sidenav #focusSidenav style="background-color: black">
+    <md-nav-list style="width: 30%; ">
+      <div >
+            <h1 style="color: white"> hi</h1>
+      </div>
+    </md-nav-list>
+  </md-sidenav>
+
+  <div class="demo-sidenav-content">
+    <h1>My Content</h1>
+
+    <div>
+      <header>Sidenav</header>
+      <button md-button (click)="focusSidenav.toggle()">Toggle Drawer</button>
+    </div>
+  </div>
+</md-sidenav-container>
