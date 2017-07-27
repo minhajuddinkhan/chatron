@@ -1,7 +1,10 @@
 
 <md-sidenav-container class="demo-sidenav-container" fullscreen>
   <md-sidenav #focusSidenav class="chat-card">
+
     <md-nav-list >
+      <h3>Conversations (: </h3>
+
       <div *ngFor="let chat of chatList">
 
         <div class="row" style="padding: 10px">
@@ -24,7 +27,7 @@
     <md-toolbar class="toolbar">
       <button class="logo " md-button (click)="focusSidenav.toggle()"> Chatron </button>
     </md-toolbar>
-    <div class="downArrow bounce" (click)="focusSidenav.toggle()">
+    <div *ngIf="false" class="downArrow bounce" (click)="focusSidenav.toggle()">
 
       <div class="row">
         <div class="col-md-2">
@@ -33,12 +36,14 @@
         <div class="col-md-10">
           <h2>
             No New Messages.</h2>
-          <p> Look at the list maybe?</p>
+          <p> Checkout your conversations?</p>
         </div>
 
       </div>
+    </div>
 
-
+    <div *ngIf="true">
+      <conversation></conversation>
     </div>
   </div>
 </md-sidenav-container>

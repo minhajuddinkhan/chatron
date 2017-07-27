@@ -66,8 +66,14 @@
   border-bottom: 10px solid;
   height: 30px;
   width: 30px;
-  transform: rotate(145deg);
+  transform: rotate(170deg);
 }
+
+.bounce:hover {
+  color: darkcyan;
+
+}
+
 
 .downArrow{
   position: fixed;

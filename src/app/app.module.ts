@@ -5,10 +5,12 @@ import { MdSidenavModule, MdButtonModule, MdToolbarModule } from '@angular/mater
 
 
 import { AppComponent } from './app.component';
+import { conversationComponent } from '../conversation/conversation.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    conversationComponent
   ],
   imports: [
     BrowserModule,
