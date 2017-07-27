@@ -1,11 +1,11 @@
 
 <md-sidenav-container class="demo-sidenav-container" fullscreen>
-  <md-sidenav #focusSidenav class="chat-card">
+  <md-sidenav [attr.mode]="sidenavMode" #focusSidenav class="chat-card">
 
     <md-nav-list >
       <h3>Conversations (: </h3>
 
-      <div *ngFor="let chat of chatList">
+      <div *ngFor="let chat of chatList" (click)="makeConversationVisible(focusSidenav)" >
 
         <div class="row" style="padding: 10px">
           <div class="col-md-8">
@@ -27,7 +27,7 @@
     <md-toolbar class="toolbar">
       <button class="logo " md-button (click)="focusSidenav.toggle()"> Chatron </button>
     </md-toolbar>
-    <div *ngIf="false" class="downArrow bounce" (click)="focusSidenav.toggle()">
+    <div *ngIf="!showConversation" class="downArrow bounce" (click)="focusSidenav.toggle()">
 
       <div class="row">
         <div class="col-md-2">
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <div *ngIf="true">
+    <div *ngIf="showConversation">
       <conversation></conversation>
     </div>
   </div>
