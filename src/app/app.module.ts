@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdSidenavModule, MdButtonModule, MdToolbarModule } from '@angular/material'
+import { MdSidenavModule, MdButtonModule, MdToolbarModule, MdInputModule } from '@angular/material'
 
 
 import { AppComponent } from './app.component';
@@ -17,7 +17,8 @@ import { conversationComponent } from '../conversation/conversation.component'
     BrowserAnimationsModule,
     MdSidenavModule,
     MdButtonModule,
-    MdToolbarModule
+    MdToolbarModule,
+    MdInputModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
