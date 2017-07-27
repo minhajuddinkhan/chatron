@@ -1,9 +1,24 @@
 
 <md-sidenav-container class="demo-sidenav-container" fullscreen>
-  <md-sidenav #focusSidenav style="background-color: black">
-    <md-nav-list style="width: 30%; ">
-      <div >
-            <h1 style="color: white"> hi</h1>
+  <md-sidenav #focusSidenav class="chat-card">
+    <md-nav-list >
+      <div *ngFor="let chat of chatList">
+
+        <md-grid-list cols="2" rowHeight="2:1">
+          <md-grid-tile>     <img class="chat-card-img"
+                                  src="{{chat.image}}" alt="">
+          </md-grid-tile>
+          <md-grid-tile>  {{ chat.name }} </md-grid-tile>
+
+        </md-grid-list>
+       <!-- <md-grid-list cols="2" rowHeight="1:1">
+          <md-grid-tile>
+          </md-grid-tile>
+          <md-grid-tile>
+            <h1> {{ chat.name }}</h1>
+          </md-grid-tile>
+        </md-grid-list>
+       --> <p>  {{chat.message }}</p>
       </div>
     </md-nav-list>
   </md-sidenav>
