@@ -8,13 +8,13 @@
           <div class="col-md-8">
             <img src="{{chat.image}}" class="chat-card-img" alt="">
           </div>
-          <div class="col-md-4" style="text-align: left">
-            <h4 >{{ chat.name }}</h4>
+          <div class="col-md-4"  >
+            <button md-button class="chat-card-name" >{{ chat.name }}</button>
           </div>
           <br>
 
         </div>
-        <p> reply kardo larkay?</p>
+        <p class="chat-card-msg"> {{chat.message}}</p>
 
       </div>
     </md-nav-list>
