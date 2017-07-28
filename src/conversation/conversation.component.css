@@ -4,6 +4,7 @@
   border-radius: 10px;
   padding: 10px;
   display: inline-block;
+  font-size: medium;
 }
 
 .message-text {
@@ -11,6 +12,14 @@
   bottom:50px;
   padding:0;
   width: 100%;
-
 }
+
+.chat-area{
+
+  overflow: scroll; height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 500px;
+}
+
 

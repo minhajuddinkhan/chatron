@@ -1,6 +1,6 @@
 <div class="container" >
 
-  <div id="chat-box">
+  <div  class="chat-area" id="chat-area">
     <div class="row" style="padding: 10px">
       <h2>
         Ali
@@ -8,13 +8,15 @@
       <hr>
     </div>
     <div *ngFor="let thread of chat.messages" >
+
       <h3 class="convo-message"
           [ngStyle]="{
         'background-color': thread.type === 'sender' ? 'lightskyblue': 'darkcyan',
         'float': thread.type === 'sender' ? 'left': 'right'
         }">
-        <img  src="{{thread.type === 'sender' ? senderImg : recieverImg}}" class="chat-card-img" alt="">
+        <img  src="{{thread.type === 'sender' ? senderImg : receiverImg}}" class="chat-card-img" alt="">
         {{thread.msg}}
+
       </h3>
       <div class="clearfix"></div>
     </div>

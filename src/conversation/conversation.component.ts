@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'conversation',
@@ -35,6 +35,8 @@ export class conversationComponent{
   pushMessage(message: string) {
 
     this.chat.messages.push({ type: 'receiver', msg: message})
+    var objDiv = document.getElementById("chat-area");
+    objDiv.scrollTop = objDiv.scrollHeight;
 
   }
 }
