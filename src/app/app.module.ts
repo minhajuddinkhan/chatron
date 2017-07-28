@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdSidenavModule, MdButtonModule, MdToolbarModule, MdInputModule } from '@angular/material'
 
@@ -13,6 +14,7 @@ import { conversationComponent } from '../conversation/conversation.component'
     conversationComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     MdSidenavModule,

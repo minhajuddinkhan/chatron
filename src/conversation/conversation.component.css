@@ -9,9 +9,8 @@
 .message-text {
   position:fixed;
   bottom:50px;
-  width: 500px;
-  margin:none;
   padding:0;
+  width: 100%;
 
 }
 

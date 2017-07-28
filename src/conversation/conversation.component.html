@@ -1,26 +1,32 @@
-<div class="container">
+<div class="container" >
 
-  <div class="row" style="padding: 10px">
-    <h2>
-      Ali
-    </h2>
-    <hr>
-  </div>
-  <div *ngFor="let thread of chat.messages">
-    <h3 class="convo-message"
-        [ngStyle]="{
+  <div id="chat-box">
+    <div class="row" style="padding: 10px">
+      <h2>
+        Ali
+      </h2>
+      <hr>
+    </div>
+    <div *ngFor="let thread of chat.messages" >
+      <h3 class="convo-message"
+          [ngStyle]="{
         'background-color': thread.type === 'sender' ? 'lightskyblue': 'darkcyan',
         'float': thread.type === 'sender' ? 'left': 'right'
         }">
-      <img  src="{{thread.type === 'sender' ? senderImg : recieverImg}}" class="chat-card-img" alt="">
-      {{thread.msg}}
-    </h3>
-    <div class="clearfix"></div>
+        <img  src="{{thread.type === 'sender' ? senderImg : recieverImg}}" class="chat-card-img" alt="">
+        {{thread.msg}}
+      </h3>
+      <div class="clearfix"></div>
+    </div>
+
   </div>
 
   <div class="message-text" style="width: 100%;">
     <md-input-container style="width: 100%">
-      <input mdInput placeholder="Send SMS  " style="font-size: x-large">
+      <input mdInput placeholder="Send SMS"
+             [(ngModel)]="textMessage"
+             (keyup.enter)="pushMessage(textMessage)"
+             style="font-size: x-large">
     </md-input-container>
   </div>
 
